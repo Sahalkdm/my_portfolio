@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+      #opac{
+        height: 100vh;
+            
+            align-items: center;
+            justify-content: center;
+      }
+      #opac::before{
+        content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0, 0, 0, 0.92);
+      }
+      
+      .anim-art{
+        width: 100%;
+        height: 150px;
+        background-image: url('/artfest.png');
+        background-size: cover;
+      }
+      .anim{
+        width: 100%;
+        height: 150px;
+        background-size: cover;
+      }
+      .anim-art:hover{
+        background-image: url('/artfestgif.gif');
+      }
+      .card-anim{
+        transition: transform 330ms ease-in-out;
+      }
+      .card-anim:hover{
+        transform: scale(1.1);
+      }
+    </style>
+    <link rel="icon" href="chess-queen-solid.svg" type="image/gif" sizes="16x16">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div id="opac" >
+    <header style="position:fixed; width:100%; z-index:1;" class="animated slideInDown shadow">
+      <nav class="navbar navbar-expand-lg navbar-dark justify-content-between m-0 text-white" style="background: rgba(0, 0, 0, 0.929);">
+        <div class="pl-md-4 my-auto">
+          <div style="float:left">
+          <img class="rounded-circle" style="height:3.5rem" src="/IMG-20211009-WA0041-PhotoRoom.png">
+        </div>
+        <div class="pl-1 pl-md-2" style="float:left;">  
+          <h3 style="margin-top:0.7rem">Sahal K</h3>
+        </div>
+        </div>
+        <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: end;">
+          <div class="navbar-nav text-white" style="width: fit-content;">
+            <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#aboutme">About Me</a>
+            <a class="nav-item nav-link" href="#education">Education</a>
+            <a class="nav-item nav-link" href="#experiences">experiences</a>
+            <a class="nav-item nav-link" href="#works">Works</a>
+            <a class="nav-item nav-link" href="#skills">Skills</a>
+            <a class="nav-item nav-link" href="#hobbies">Hobbies</a>
+            <a class="nav-item nav-link" href="#contactme">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" style=" padding:5rem ;height: 100vh;">
+      <div class="container">
+        <div class="text-center">
+          <div class="text-center text-white" style="padding-top:10rem">
+            <h1 class="animated slideInLeft">Hi I'm Sahal K</h1>
+            <h5 class="animated slideInRight mb-2 mb-md-5">An Engineering Student of IIT Madras Pursuing Inter-Disciplinary M.tech in Data Science and B.tech in Engineering Design</h5>
+            <h3 class="animated slideInRight" style="color: rgb(206, 180, 146);">
+              <p class="typewrite" data-period="2000" data-type='[ "Hi, Im Sahal.", "I am Developer.", "I Love Programming and ML.", "I Love Web Development.","I Love Data Science" ]'>
+                <span class="wrap"></span>
+              </p>
+            </h3>
+              
+          </div>
+        </div>
+      </div>
+      <div class="animated slideInRight p-2" style="position: absolute;right: 0px;top: 40%;">
+        <a href="https://www.linkedin.com/in/sahal-k-403281297"><i class="fa-brands fa-linkedin fa-2x my-1" style="color:#3e4e86 " onmouseover='this.style.color="#5c6ca3"' 
+          onmouseleave='this.style.color="#3e4e86"'></i></a><br>
+        <a href='mailto:sahalkdm@gamil.com'><i class="fa-solid fa-envelope my-1" style="font-size: 27px;color: #3e4e86;" onmouseover='this.style.color="#5c6ca3"' 
+          onmouseleave='this.style.color="#3e4e86"'></i></a><br>
+        <a href="https://wa.me/7736614854"><i class="fa-brands fa-square-whatsapp fa-2x my-1" style="color: #3e4e86;" onmouseover='this.style.color="#5c6ca3"' 
+          onmouseleave='this.style.color="#3e4e86"'></i></a><br>
+        <a href="https://www.facebook.com/people/Sahal-K/100075902350348/"><i class="fa-brands fa-facebook-square fa-2x my-1" style="color: #3e4e86;" onmouseover='this.style.color="#5c6ca3"' 
+          onmouseleave='this.style.color="#3e4e86"'></i></a><br/>
+        <a href="https://www.instagram.com/sahal_kdm/"><i class="fa-brands fa-instagram-square fa-2x my-1" style="color: #3e4e86;" onmouseover='this.style.color="#5c6ca3"' 
+          onmouseleave='this.style.color="#3e4e86"'></i></a>
+      </div>
+    </section>
+
+    <section class="p-md-5 p-2" id="aboutme">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 text-center">
+             <img src="/IMG-20211009-WA0041-PhotoRoom.png" alt="" class="" style="width: 10rem;">
+          </div>
+          <div class="col-md-10 text-center">
+            <h1 class="text-center" style="text-align-last: center" data-aos="fade-right"
+        data-aos-duration="2000">About Me</h1>
+          <div class="" style="height: 90%;align-content: center;">
+            <p>I am Sahal K, an Engineering student at IIT Madras Pursuing Inter-Disciplinary M.tech in Data Science and B.tech in Engineering Design. 
+              I was born and raised in Malappuram, Kerala.I like to travel, watch and play football. 
+              I believe travelling gives you a new perspective to everything. I love web development, programming and mechine learning and explore new things</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light p-md-5" id="education">
+      <div class="container">
+        <h1 class="text-center" style="text-align-last: center" data-aos="fade-right"
+        data-aos-duration="2000">Education</h1>
+        <div class="row" data-aos="fade-up"
+        data-aos-duration="2000">
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <i class="fa-solid fa-school display-1" style="color:rgb(51, 52, 48);"></i> 
+              <div class="card-body">
+                <h4 class="card-title">Primary</h4>
+                <p class="card-text">A.M.L.P.S. Kadannamanna<br>A.U.P.S. Kadannamanna</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <i class="fa-solid fa-school display-1" style="color:rgb(51, 52, 48);"></i>
+              <div class="card-body">
+                <h4 class="card-title">Secondary</h4>
+                <p class="card-text">G.V.H.S.S. Mankada</p>
+                <p>SSLC - 2018 : Full A+<br>12th - 2020 : 98%</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+                <i class="fa-solid fa-building-columns display-1" style="color:rgb(51, 52, 48);"></i>              
+                <div class="card-body">
+                <h4 class="card-title">Engineering</h4>
+                <p class="card-text">Indian Institute of Technology, Madras - 2026</p>
+                <p>B.Tech in Engineering Design and Inter-Disciplinary M.tech in Data Science</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-md-5" id="achievements">
+      <div class="container">
+        <h1 class="text-center" style="text-align-last: center" data-aos="fade-up"
+        data-aos-duration="2000">Achievements</h1>
+        <div class="row" data-aos="fade-up"
+        data-aos-duration="2000">
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <img src="https://www.pngkey.com/png/full/21-217733_free-png-trophy-png-images-transparent-winner-trophy.png" style="height: 8rem;">
+              <div class="card-body">
+                <h4 class="card-title mt-1">KEAM 2021<br></h4>
+                <p class="card-text font-weight-bold mt-2">4<sup>th</sup> Rank</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <img src="https://www.pngkey.com/png/full/21-217733_free-png-trophy-png-images-transparent-winner-trophy.png" style="height: 8rem;">
+              <div class="card-body">
+                <h4 class="card-title mt-1">ICAR 2021</h4>
+                <p class="card-text font-weight-bold mt-2">AIR 22</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <img src="https://www.pngkey.com/png/full/21-217733_free-png-trophy-png-images-transparent-winner-trophy.png" style="height: 8rem;">              <div class="card-body">
+                <h4 class="card-title mt-1">JEE Advanced 2021</h4>
+                <p class="card-text font-weight-bold mt-2">AIR 6318</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light p-md-5" id="experiences">
+      <div class="container">
+        <h1 class="text-center" style="text-align-last: center" data-aos="fade-right"
+        data-aos-duration="2000">Experiences</h1>
+        <div class="row" data-aos="fade-up"
+        data-aos-duration="2000">
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-2 shadow my-3 mx-auto" style="width: 18rem;height: 24rem;">
+              <img src="/soclogo.PNG" alt="" >              
+              <div class="card-body">
+                <h4 class="card-title">WebOps Coordinator</h4>
+                <h5 class="card-title">Sports Organising Committee, IIT Madras</h5>
+                <p class="card-text">Aug 2022 - May 2023<br>Maintaining and updating institute sports website</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 24rem;">
+              <img src="/tenslogo.png" alt="" style="width: 50%;margin: auto;margin-top: 10px;">
+              <div class="card-body">
+                <h4 class="card-title">WebOps Coordinator</h4>
+                <h5 class="card-title">Tensors Team</h5>
+                <p class="card-text">Sep 2022 - May 2023<br>Collaberating with tensors web team</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 24rem;">
+              <img src="/tenslogo.png" alt="" style="width: 50%;margin: auto;margin-top: 10px;">              
+                <div class="card-body">
+                <h4 class="card-title">Tenment Core</h4>
+                <h5 class="card-title">Tensors Team</h5>
+                <p class="card-text">Aug 2023 (current)<br>Conducting Mock tests and Jossa Counselling for JEE Aspirants</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-md-5" id="works">
+      <div class="container">
+        <h1 class="text-center" style="text-align-last: center" data-aos="fade-right"
+        data-aos-duration="2000">My Works</h1>
+        <div class="row" data-aos="fade-up"
+        data-aos-duration="2000">
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center shadow my-3 mx-auto card-anim" style="width: 18rem;height: 25rem;">
+              <div class="anim-art"></div>
+              <div class="card-body p-2 d-flex flex-column">
+                <h4 class="card-title">Art Fest Application</h4>
+                <p class="card-text" style="color: #555;">Developed a comprehensive web application for managing a local 
+                  arts festival.<br>Next.js, Tailwind CSS, MongoDB</p>
+                <a href="https://madrasa-kalamela-2024.vercel.app/" class="btn btn-secondary mt-auto">Visit Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center shadow my-3 mx-auto card-anim" style="width: 18rem;height: 25rem;">
+              <div class="anim" style="background-image: url('/quizapp.png');" onmouseover="this.style.backgroundImage='url(/quizapp.gif)'" onmouseout="this.style.backgroundImage='url(/quizapp.png)'"></div>
+              <div class="card-body p-2 d-flex flex-column">
+                <h4 class="card-title">Quiz Application</h4>
+                <p class="card-text" style="color: #555;">customizable quiz schedules, Leaderboard and 
+                  real-time discussion capabilities<br><span class="mt-2">Node.js, Express.js, MongoDB, Handlebars (HBS) 
+                  template</span></p>
+                <a href="https://lqgr-app.vercel.app/" class="btn btn-secondary mt-auto">Visit Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center shadow my-3 mx-auto card-anim" style="width: 18rem;height: 25rem;">
+              <div class="anim" style="background-image: url('/winnerpost.png');" onmouseover="this.style.backgroundImage='url(/winnerpost.gif)'" onmouseout="this.style.backgroundImage='url(/winnerpost.png)'"></div>
+              <div class="card-body p-2 d-flex flex-column">
+                <h4 class="card-title">Post Making</h4>
+                <p class="card-text" style="color: #555;">Sharable Winner Posts with different Themes. Developed for Artfest Application<br><span class="mt-2">Next.js and Tailwind CSS</span></p>
+                <a href="https://winners-post.vercel.app/" class="btn btn-secondary mt-auto">Visit Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center shadow my-3 mx-auto card-anim" style="width: 18rem;height: 25rem;">
+              <div class="anim" style="background-image: url('/ecom.png');" onmouseover="this.style.backgroundImage='url(/ecom.gif)'" onmouseout="this.style.backgroundImage='url(/ecom.png)'"></div>
+              <div class="card-body p-2 d-flex flex-column">
+                <h4 class="card-title">E-commerce Application</h4>
+                <p class="card-text" style="color: #555;">Buy your products from here<br><span class="mt-2">Nexj.js, Tailwind CSS, MongoDB</span></p>
+                <a href="https://lqgr-app.vercel.app/" class="btn btn-secondary mt-auto disabled">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center shadow my-3 mx-auto card-anim" style="width: 18rem;height: 25rem;">
+              <div class="anim" style="background-image: url('/olx_img.jpg');" onmouseover="this.style.backgroundImage='url(/olx_img.jpg)'" onmouseout="this.style.backgroundImage='url(/olx_img.jpg)'"></div>
+              <div class="card-body p-2 d-flex flex-column">
+                <h4 class="card-title">olx</h4>
+                <p class="card-text" style="color: #555;">olx react project<br>A place for selling products<br><span class="mt-2">React.js, Firebase</span></p>
+                <a href="https://github.com/Sahalkdm/olx" class="btn btn-secondary mt-auto">Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center shadow my-3 mx-auto card-anim" style="width: 18rem;height: 25rem;">
+              <div class="anim" style="background-image: url('/image.png');" onmouseover="this.style.backgroundImage='url(/image.png)'" onmouseout="this.style.backgroundImage='url(/image.png)'"></div>
+              <div class="card-body p-2 d-flex flex-column">
+                <h4 class="card-title">Post Making</h4>
+                <p class="card-text" style="color: #555;">Customizable posts with photo for students on School Opening Day<br><span class="mt-2">Next.js and Tailwind CSS</span></p>
+                <a href="https://aupskdmbacktoschoolpost.vercel.app/" class="btn btn-secondary mt-auto">Visit Site</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light p-md-5" id="skills">
+      <div class="container">
+        <h1 class="text-center mb-4" style="text-align-last: center" data-aos="fade-right"
+        data-aos-duration="2000">Skills</h1>
+        <div class="row justify-content-center" data-aos="fade-up"
+        data-aos-duration="2000" style="color: #555;">
+
+          <div class="col-md-6 col-xl-4" data-aos="fade-right"
+          data-aos-duration="2000">
+          <ul class="font-weight-bold list-unstyled h5 mx-auto" style="width: fit-content;">
+            <li class="mb-2" data-aos="fade-left"
+            data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>HTML</li>
+            <li class="mb-2" data-aos="fade-right"
+            data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>JavaScript</li>
+            <li class="mb-2" data-aos="fade-left"
+            data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>CSS</li>
+            <li class="mb-2" data-aos="fade-right"
+            data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>React.js</li>
+            <li class="mb-2" data-aos="fade-left"
+            data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Next.js</li>
+          </ul>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <ul class="font-weight-bold list-unstyled h5 mx-auto" style="width: fit-content;">
+              <li class="mb-2" data-aos="fade-left"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Node.js</li>
+              <li class="mb-2" data-aos="fade-right"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Express.js</li>
+              <li class="mb-2" data-aos="fade-left"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>MongoDB</li>
+              <li class="mb-2" data-aos="fade-right"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Handlebars</li>
+              <li class="mb-2" data-aos="fade-left"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-xl-4" data-aos="fade-left"
+          data-aos-duration="2000">
+            <ul class="font-weight-bold list-unstyled h5 mx-auto" style="width: fit-content;">
+              <li class="mb-2" data-aos="fade-left"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Python</li>
+              <li class="mb-2" data-aos="fade-right"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Machine Learning</li>
+              <li class="mb-2" data-aos="fade-left"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>DSA</li>
+              <li class="mb-2" data-aos="fade-right"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Matlab</li>
+              <li class="mb-2" data-aos="fade-left"
+              data-aos-duration="2000"><i class="fa-regular fa-circle-check mr-3"></i>Simulink</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="p-md-5" id="hobbies" style="background:rgba(105, 105, 105, 0.377);">
+      <div class="container">
+        <h1 class="text-center" style="text-align-last: center" data-aos="fade-up"
+        data-aos-duration="2000">Hobies</h1>
+        <div class="row" data-aos="fade-up"
+        data-aos-duration="2000">
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <i class="fa-solid fa-laptop-code display-1" style="color:rgb(51, 52, 48);"></i>
+              <div class="card-body">
+                <h4 class="card-title">Web Development</h4>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary my-4">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <i class="fa-solid fa-futbol display-1" style="color:rgb(51, 52, 48);"></i>
+              <div class="card-body">
+                <h4 class="card-title">Football</h4>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary my-4">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <i class="fa-solid fa-code display-1" style="color:rgb(51, 52, 48);"></i>        
+              <div class="card-body">
+                <h4 class="card-title">Coding</h4>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary my-4">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <i class="fa-solid fa-route display-1" style="color:rgb(51, 52, 48);"></i>        
+              <div class="card-body">
+                <h4 class="card-title">Travalling</h4>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary my-4">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card text-center p-3 shadow my-3 mx-auto" style="width: 18rem;height: 20rem;">
+              <i class="fa-solid fa-clapperboard display-1" style="color:rgb(51, 52, 48);"></i>        
+              <div class="card-body">
+                <h4 class="card-title">Movies</h4>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary my-4">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      <section>
+        <div class="container p-3">
+          <h1 class="text-center" style="text-align-last: center; color:rgb(135, 82, 3); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Times, serif ; font-weight: 900; margin-top: 2rem;" data-aos="fade-up"
+          data-aos-duration="2000">In the News</h1>
+            <div class="embed-responsive embed-responsive-16by9 shadow" style="margin-bottom:3rem;margin-top:2rem">
+              <iframe class="embed-responsive-item" src="Brown Yellow.png" allowfullscreen data-aos="fade-up"
+              data-aos-duration="2000"></iframe>
+            </div>
+        </div>
+      </section>
+
+
+    <section class="p-5" id="contactme" style="background:rgba(150, 149, 149, 0.377);display: none;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          <form id="submit-form" action="">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Name</label>
+                <input type="text" name="name" class="form-control" id="inputPassword4" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Commands">Commands</label>
+              <textarea name="commands" class="form-control" cols="30" rows="7" placeholder="type your commands here..."></textarea>
+            </div>
+            
+           
+           
+           <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary" style="width:50%">Submit</button>
+          </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="background: linear-gradient(to right, #44251f 0%, #660033 50%, #44251f 100%);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center text-white">
+            <a href="https://www.linkedin.com/in/sahal-k-403281297"><i class="fa-brands fa-linkedin fa-2x p-1" style="color: #ffffff;"></i></a>
+        <a href='mailto:sahalkdm@gamil.com'><i class="fa-solid fa-envelope p-1 fa-2x" style="color: #ffffff;"></i></a>
+        <a href="https://wa.me/7736614854"><i class="fa-brands fa-square-whatsapp fa-2x p-1" style="color: #ffffff;"></i></a>
+            <a href="https://www.facebook.com/people/Sahal-K/100075902350348/"><i class="fa-brands fa-facebook-square fa-2x p-1" style="color:white"></i></a>
+            <a href="https://www.instagram.com/sahal_kdm/"><i class="fa-brands fa-instagram-square fa-2x p-1" style="color:white"></i></a>
+            <a href="https://www.youtube.com/channel/UCizZT38nZSEiluC0GXECBcA"><i class="fa-brands fa-youtube fa-2x p-1" style="color: white;"></i></a>
+            <p>Copyrights</p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a5496fd0d2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+//AKfycbwl1RTX37duk6SGjUlygkAzOXj-NgwetlDkGod0_VfhGOUMUF8rEg63QzOFqQdocDWChA
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+    </script>
+    <script>
+     /* $("#submit-form").submit((e)=>{
+         e.preventDefault();
+         console.log('submitted');
+         console.log($("#submit-form").serialize());
+         $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbxcISGJ9OKIoxsiSmHUMetBsTMzg1nVzGxNp4gf8InlKk-7SiQM28k8eLU532FHkxqh/exec",
+        method:"POST",
+        data:$("#submit-form").serialize(),
+        success:function (response){
+            alert("Form submitted successfully")
+            window.location.reload()
+            //window.location.href="https://google.com"
+        },
+        error:function (err){
+            alert("Something Error")
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    })
+})*/
+    </script>
+    
+  </body>
+</html>
